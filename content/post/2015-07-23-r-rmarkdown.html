@@ -1,0 +1,62 @@
+---
+title: "Study on Residents' Needs Base on Apartment Building Evaluation"
+author: "Guangyu Du"
+date: 2015-07-23T21:13:14-05:00
+bibliography: "reference.bib"
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+
+
+<div id="abstact" class="section level1">
+<h1>Abstact</h1>
+<p>There exist a substantial amount of residents living in Toronto’s apartment buildings. In this paper we explore the Apartment Building Evaluation dataset, which was a survey conducted by OPENDATA Toronto. In this project, we focus on three important basics of the apartments’ condition which are: the security, lobby condition and parking area condition. And the result shows that majority of the residents are satisfied with the security yet the parking condition still needs to be improved.</p>
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Since Toronto is one of the biggest and most wealthy cities in Canada, the existence of huge population makes apartment buildings absolutely necessary to this city. Millions of people are living in Toronto’s apartment buildings. This leads to a interesting question: are they really enjoying their stay? On which parts so far are Toronto’s apartments doing a great job and which parts are still needed to be improved? Base on the data provided by Opendata Toronto, this project will deeply analyze the real need of Toronto’s apartment residents.</p>
+<p>The dataset contains building evaluation scores for all evaluated buildings that are registered in the Apartment Building Standards(ABS) program. All areas are reviewed for each building with rates assigned by scores from 1 to 5, with 1 being the worst condition and 5 being the best condition. The overall scores are rated out of 100. However, we transform the overall scores into out of 5 to get a clearer view on the data.</p>
+</div>
+<div id="part1-overview-on-the-data." class="section level1">
+<h1>Part1: Overview on the data.</h1>
+<pre class="r"><code>summary(na.omit(score_five))
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.850   3.500   3.800   3.796   4.100   5.000
+par(mfrow = c(2,2))
+hist(na.omit(score_five), main=&quot;Histogram of Overall Score&quot;)
+hist(as.numeric(SECURITY), main=&quot;Histogram of Security&quot;)
+hist(as.numeric(ENTRANCE_LOBBY), main=&quot;Histogram of Lobby&quot;)
+hist(as.numeric(PARKING_AREA), main=&quot;Histogram of Parking&quot;)</code></pre>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/histgorams-1.png" width="672" />
+The average overall score of Toronto apartments is 3.796/5, with the lowest score of 1.85 and the highest score of 5. And half of the apartments are between the score range of 3.5~4.1. From the histogram of overall score, we see the graph is slighly left-skewed, and the score gathers around 3.75.</p>
+<p>Moving onto the other three histogram. The histogram of security is extremely left-skewed, which shows that most of the buildings have a well provided security. The histogram of lobby indicates that most of the residents think their lobby condition is 4 out of 5. However, the histogram of parking condition shows that residents are not very satisfied with the parking condition of the apartments.</p>
+</div>
+<div id="part2-how-are-the-rating-influence-the-overall-score." class="section level1">
+<h1>Part2: How are the rating influence the overall score.</h1>
+<pre class="r"><code>par(mfrow = c(1,3))
+plot(SECURITY, score_five)
+plot(ENTRANCE_LOBBY, score_five)
+plot(PARKING_AREA, score_five)</code></pre>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/linear%20relation-1.png" width="672" /></p>
+<p>From the plots above, we find a positive linear relationship between the overall score and each condition score. As the rating on security, lobby and parking goes higher, the overall score of the building increases simultaneously. This implies that all three conditions are important elements that residents care about the buildings.</p>
+</div>
+<div id="part3-concluding-the-quality-of-toronto-apartments." class="section level1">
+<h1>Part3: Concluding the quality of Toronto apartments.</h1>
+<pre class="r"><code>element &lt;- c(&quot;Overall Score&quot;, &quot;Security&quot;, &quot;Lobby&quot;, &quot;Parking&quot;)
+boxplot(score_five, as.numeric(SECURITY), as.numeric(ENTRANCE_LOBBY), as.numeric(PARKING_AREA), names = element, horizontal = FALSE, main = &quot;Boxplot of Overall Score and Area Conditions&quot;, ylab= &quot;score out of 5&quot;)</code></pre>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/boxplot%20-1.png" width="672" /></p>
+<p>The boxplots above further states the residents’ rating on each area condition. The dots on the plots are outliers which are ignored in our study. We should be proud of the security service of Toronto apartments since most of the residents give high scores on it. The condition of lobby is also outstanding with the proofs from the majority. However, the average score of 3 out of 5 of parking condition should be an alert to all the building management.</p>
+</div>
+<div id="weakness-and-next-step" class="section level1">
+<h1>Weakness and Next-step</h1>
+<p>The dataset was detailed and useful. However, there are more possible elements that are influcing the residents’ living condition. For example, the service from building managment, the amount and quality of amenity provided, the nearby community services and so on. There also exist a lack on parking condition rating. For example, some buildings do not have large parking space, but there might be a parking area nearby the building which is also convinent to the residents.</p>
+<p>To improve the survey, we should gather opinions from the residents and analyze what are their real needs beside the ones they are rating in this survey.</p>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion:</h1>
+<p>Residents in Toronto apartments are living in a safe and clean environment with high-level security service and well rated lobby area. Yet they are not very satisfied with the parking condition provided by the building.</p>
+</div>
+<div id="reference" class="section level1">
+<h1>Reference</h1>
+</div>
