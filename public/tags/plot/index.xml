@@ -8,12 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Study on Residents&#39; Needs Base on Apartment Building Evaluation</title>
-      <link>/2020/09/26/study-on-residents-needs-base-on-apartment-building-evaluation/</link>
+      <title>Study on Residents&#39; Need Base on Apartment Building Evaluation</title>
+      <link>/2020/09/26/study-on-residents-need-base-on-apartment-building-evaluation/</link>
       <pubDate>Sat, 26 Sep 2020 21:13:14 -0500</pubDate>
       
-      <guid>/2020/09/26/study-on-residents-needs-base-on-apartment-building-evaluation/</guid>
-      <description>Author: Guangyu Du  Abstact There exist a substantial amount of residents living in Toronto’s apartment buildings. In this paper we explore the Apartment Building Evaluation dataset, which was a survey conducted by OPENDATA Toronto. In this project, we focus on three important basics of the apartments’ condition which are: the security, lobby condition and parking area condition. And the result shows that majority of the residents are satisfied with the security yet the parking condition still needs to be improved.</description>
+      <guid>/2020/09/26/study-on-residents-need-base-on-apartment-building-evaluation/</guid>
+      <description>Author: Guangyu Du
+ Abstact There exist a substantial amount of residents living in Toronto’s apartment buildings. In this paper we explore the Apartment Building Evaluation dataset, which was a survey conducted by OPENDATA Toronto. In this project, we focus on three important basics of the apartments’ condition which are: the security, lobby condition and parking area condition. And the result shows that majority of the residents are satisfied with the security yet the parking condition still needs to be improved.</description>
     </item>
     
     <item>
@@ -22,8 +23,7 @@
       <pubDate>Sat, 26 Sep 2020 21:13:14 -0500</pubDate>
       
       <guid>/2020/09/26/study-on-residents-needs-base-on-apartment-building-evaluation/</guid>
-      <description>Author: Guangyu Du
- Abstact There exist a substantial amount of residents living in Toronto’s apartment buildings. In this paper we explore the Apartment Building Evaluation dataset, which was a survey conducted by OPENDATA Toronto. In this project, we focus on three important basics of the apartments’ condition which are: the security, lobby condition and parking area condition. And the result shows that majority of the residents are satisfied with the security yet the parking condition still needs to be improved.</description>
+      <description>Author: Guangyu Du  Abstact There exist a substantial amount of residents living in Toronto’s apartment buildings. In this paper we explore the Apartment Building Evaluation dataset, which was a survey conducted by OPENDATA Toronto. In this project, we focus on three important basics of the apartments’ condition which are: the security, lobby condition and parking area condition. And the result shows that majority of the residents are satisfied with the security yet the parking condition still needs to be improved.</description>
     </item>
     
   </channel>

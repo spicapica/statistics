@@ -1,5 +1,5 @@
 ---
-title: "Study on Residents' Needs Base on Apartment Building Evaluation"
+title: "Study on Residents' Need Base on Apartment Building Evaluation"
 author: "Guangyu Du"
 date: 2020-09-26T21:13:14-05:00
 bibliography: "reference.bib"
