@@ -93,6 +93,8 @@ To improve the survey, we should gather opinions from the residents and analyze 
 
 Residents in Toronto apartments are living in a safe and clean environment with high-level security service and well rated lobby area. Yet they are not very satisfied with the parking condition provided by the building. 
 
+# Statement:
+Code and data supporting this analysis is available at: https://github.com/spicapica/statistics
 
 # Reference
 @citetidyverse
